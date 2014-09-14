@@ -1,0 +1,32 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<link rel="stylesheet" href = "css/style.css">
+<link rel="stylesheet" href = "libs/pure/pure.css">
+
+</head>
+
+<body ng-app="pintical">
+    <div class="main-container">
+        <div class="header grid">
+            <div class="grid__col grid__col--3-of-4 grid__col--centered">
+                <div class="center">
+                    <h1 class="header_title">
+                        <a href="/about" class="header-link">
+                            <span class="header_letter">P</span>intical
+                        </a>
+                    </h1>
+                    <h2 ng-class="{hidden: header_subtitle == ''}" class="header_subtitle"><a href="/" class="header-link" ng-bind="header_subtitle">Anonymous Chat Board</a>
+                    </h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" ng-view></div>
+    </div>
+</body>
+</html>

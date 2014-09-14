@@ -1,0 +1,15 @@
+{
+  "name": "BensWebsite",
+  "main": "server.js",
+  "description": "Personal website",
+  "author": "Ben Carroll",
+  "dependencies": {
+    "express": "~3.4.4",
+    "mongoose": "~3.6.2",
+    "nodemailer": "^0.6.5",
+    "socket.io": "latest",
+    "winston": "latest",
+    "robots.txt": "latest",
+    "prerender-node": "latest"
+  }
+}
