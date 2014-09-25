@@ -3,30 +3,21 @@
 <html lang="en">
 
 <head>
-
-<link rel="stylesheet" href = "css/style.css">
-<link rel="stylesheet" href = "libs/pure/pure.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/pure/pure.css">
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
-
-<body ng-app="pintical">
-    <div class="main-container">
-        <div class="header grid">
-            <div class="grid__col grid__col--3-of-4 grid__col--centered">
-                <div class="center">
-                    <h1 class="header_title">
-                        <a href="/about" class="header-link">
-                            <span class="header_letter">P</span>intical
-                        </a>
-                    </h1>
-                    <h2 ng-class="{hidden: header_subtitle == ''}" class="header_subtitle"><a href="/" class="header-link" ng-bind="header_subtitle">Anonymous Chat Board</a>
-                    </h2>
-                    <hr>
+<body ng-app="BensWebsite">
+    <div id="first-page" />
+        <div class="hamburger-menu">
+            <div class="grid">
+                <img src="http://i1293.photobucket.com/albums/b595/ben_carroll2/whistler_photo_zpsad647f1c.jpg" id="full-screen-background-image" alt="full screen background image">
+                <div class = "cool-font">
+                        Benjamin Carroll
                 </div>
             </div>
         </div>
-
-        <div class="content" ng-view></div>
     </div>
 </body>
+
 </html>
