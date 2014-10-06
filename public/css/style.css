@@ -29,13 +29,8 @@ html, body {
   float:right;
 }
 
-.hamburger-menu{
-  height: 100%;
-  max-height: none;
-  background-color: white;
-  background-repeat: repeat-y;
-}
-
-#first-page {
+.first-page {
   height: 1050px;
 }
+
+
