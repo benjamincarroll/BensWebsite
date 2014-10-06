@@ -1,14 +1,13 @@
-var express = require('express');
-var fs = require('fs');
-//var request = require('request');
-//cheerio = require('cheerio');
-var app = express();
+// server.js
+
+// BASE SETUP
+// =============================================================================
+
+// call the packages we need
 var mongoose = require('mongoose');
-console.log("well hello there");
-
-// configuration =================
-
-var port = process.env.PORT || 9090;
+var express    = require('express');    // call express
+var app        = express();         // define our app using express
+var bodyParser = require('body-parser');
 
 // Connect to the db
 mongoose.connect("mongodb://localhost:27017/BensWebsite", function(err, db) {
@@ -17,22 +16,31 @@ mongoose.connect("mongodb://localhost:27017/BensWebsite", function(err, db) {
   }
 });
 
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
+var port = process.env.PORT || 8080;    // set our port
 
-app.configure(function () {
- app.use(express.static(__dirname + '/public'));
- app.use(require('prerender-node').set('prerenderToken', '2HzURwBkqwsct8qtViw4'));
- app.use(express.bodyParser());
- app.use(app.router);
- app.use(express.methodOverride());
+// ROUTES FOR OUR API
+// =============================================================================
+var router = express.Router();        // get an instance of the express Router
+
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+app.get('/', function(req, res) {
+  res.json({ message: 'hooray! welcome to our api! YEAH!' });
 });
 
-//routes
-// I am going to need this soon
-//require('./app/routes')(app);
+// more routes for our API will happen here
 
-// setup server and listen on ports
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+// app.use('/api', router);
+
+// START THE SERVER
+// =============================================================================
 app.listen(port);
-
-console.log('Magic happens on port 8081');
+console.log('Magic happens on port ' + port);
 exports = module.exports = app;
