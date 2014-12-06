@@ -1,32 +1,29 @@
-.center {
-  position: relative;
-}
-
-html, body {
-  height: 100%;
+html{
+  height: auto;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  background: url(http://i1293.photobucket.com/albums/b595/ben_carroll2/whistler_photo_crop_blur_zpsfa41017f.jpg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+img.center {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .page-container {
   position: relative;
   height: 1050px;
 }
 
-#full-screen-background-image {
-  position:relative;
-  z-index: -999;
-  width: 100%;
-  height: 100%;
-}
-
 .cool-font {
-  position: absolute;
   font-size: 175%;
   text-align: center;
-  top: -30px;
+  top: 10px;
   width: 100%;
   font-family: 'Rock Salt';
 }
