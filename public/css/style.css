@@ -16,3 +16,13 @@ img.medium {
     top: -46px;
     left: 7px;
 }
+img.go-pro-photo {
+    position: relative;
+    top: -60px;
+    left: 105px;
+    float: right;
+}
+
+.right {
+  float:right;
+}
