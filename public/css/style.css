@@ -1,13 +1,18 @@
 .cool-font {
-  font-size: 175%;
-  text-align: center;
-  top: 10px;
-  width: 100%;
-  font-family: 'Rock Salt';
+    font-size: 175%;
+    text-align: center;
+    top: 10px;
+    width: 100%;
+    font-family: 'Rock Salt';
 }
-
 img.logos {
-  position:relative;
-  top: -50px;
-  float:right;
+    position: relative;
+    top: -40px;
+    float: right;
+    padding-right: 25px;
+}
+img.medium {
+    position: relative;
+    top: -46px;
+    left: 7px;
 }
