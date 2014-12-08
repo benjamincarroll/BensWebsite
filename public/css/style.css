@@ -1,25 +1,3 @@
-html{
-  height: auto;
-  width: 100%;
-  background: url(http://i1293.photobucket.com/albums/b595/ben_carroll2/whistler_photo_crop_blur_zpsfa41017f.jpg) no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-img.center {
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-container {
-  position: relative;
-  height: 1050px;
-}
-
 .cool-font {
   font-size: 175%;
   text-align: center;
@@ -28,3 +6,8 @@ img.center {
   font-family: 'Rock Salt';
 }
 
+img.logos {
+  position:relative;
+  top: -50px;
+  float:right;
+}
